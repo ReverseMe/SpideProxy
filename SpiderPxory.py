@@ -122,7 +122,7 @@ def deflate(data):
 fp = open('ip.txt', 'w+')
 def checkip(type, ip, port, addr):
     socket.setdefaulttimeout(10)
-    url = "http://www.baidu.com"
+    #url = "http://www.baidu.com"
     proxy_host = {type: type + '://' + ip + ':' + port}
     try:
         lock.acquire()
