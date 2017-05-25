@@ -155,7 +155,7 @@ def start():
     # iplist = re.findall(parent, respdata)
     # return iplist
     try:
-        # setproxy('http','60.167.134.120','808')
+        setproxy('http','60.167.134.120','808')
         indexpage = urlget('http://www.xicidaili.com')
     except Exception, e:
         print e
@@ -165,8 +165,6 @@ def start():
         print x[0]
         maxpage = gettotalpage(x[0], "http://www.xicidaili.com" + x[1])
         maxvalue = int(maxpage[1])
-        if(maxvalue>10):
-            maxvalue = 10
         for i in range(1,maxvalue):
             getpageipandtest("http://www.xicidaili.com" + x[1]+"/"+str(i), )
             time.sleep(random.randint(0,4))
