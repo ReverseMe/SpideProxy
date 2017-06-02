@@ -155,9 +155,11 @@ def start():
     # iplist = re.findall(parent, respdata)
     # return iplist
     try:
+		#获取首页
         indexpage = urlget('http://www.xicidaili.com')
     except Exception, e:
         print e
+		#获取所有二级目录
     parent = re.compile(r'<h2>([^<]*)</h2>\s*<a[^>]+?href="(/[^"]*)">')
     urllist = re.findall(parent, indexpage)
     for x in urllist:
