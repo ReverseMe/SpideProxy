@@ -155,7 +155,6 @@ def start():
     # iplist = re.findall(parent, respdata)
     # return iplist
     try:
-        setproxy('http','60.167.134.120','808')
         indexpage = urlget('http://www.xicidaili.com')
     except Exception, e:
         print e
